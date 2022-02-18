@@ -2,6 +2,8 @@ const form = document.getElementById('regist-form')
 
 function renderResult(obj){
     const listResult = document.querySelector('#list-result')
+    listResult.innerHTML = ''
+    
     for (const form in obj) {
         listResult.innerHTML += `<li>${form} : ${obj[form]}`
     }
