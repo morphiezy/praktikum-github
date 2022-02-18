@@ -1,5 +1,12 @@
 const form = document.getElementById('regist-form')
 
+function renderResult(obj){
+    const listResult = document.querySelector('#list-result')
+    for (const form in obj) {
+        listResult.innerHTML += `<li>${form} : ${obj[form]}`
+    }
+}
+
 function allFormFill(){
 
     const dataPendaftaran = {
@@ -17,7 +24,9 @@ function allFormFill(){
         result.push(dataPendaftaran[data])
     }
 
-    return result.every(value => value !== "")
+    return result.every(value => value !== "") ? 
+           renderResult(dataPendaftaran) :
+           alert("please fill all form")
 }
 
 form.addEventListener('submit',(e)=>{
