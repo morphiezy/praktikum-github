@@ -1,9 +1,4 @@
 const form = document.getElementById('regist-form')
-// const firstName = document.getElementById('firstname')
-// const lastName = document.getElementById('lastname')
-// const email = document.getElementById('email')
-// const nim =  document.getElementById('nim')
-
 
 function allFormFill(){
 
