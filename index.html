@@ -8,10 +8,31 @@
 </head>
 <body>
   <h1>Form Pendaftaran</h1>
-  <form action="" method="POST">
+  <br action="" method="POST">
     <input type="text" name="firstname" id="firstname" placeholder="First name"> <br/><br/>
     <input type="text" name="lastname" id="lastname" placeholder="Last Name"> <br/><br/>
     <input type="text" name="nim" id="nim" placeholder="NIM"> <br/><br/>
+
+    <span>Asal Sekolah : </span>
+    <select name="sma" id="sma">
+        <option value="SMAN 1">SMAN 1</option>
+        <option value="SMAN 2">SMAN 2</option>
+        <option value="SMAN 3">SMAN 3</option>
+    </select>
+
+    <br/></br>
+
+    <input type="radio" name="gender" value="male" id="laki-laki">
+    <label for="laki-laki">
+        <span>Laki Laki</span>
+    </label>
+
+    <input type="radio" name="gender" value="female" id="perempuan">
+    <label for="perempuan">
+        <span>Perempuan</span>
+    </label>
+
+    <br/><br/>
 
     <input type="submit" value="Daftar">
   </form>
