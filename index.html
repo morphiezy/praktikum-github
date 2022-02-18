@@ -5,15 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pendaftaran</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .result-box{
+            width: 300px;
+            height: auto;
+            position: absolute;
+            top:50px;
+            left: 400px;
+            padding: 20px 30px;
+            border-radius: 5px;
+            border:1px solid rgba(0,0,0,.1);
+            box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+        }
+
+        #list-result{
+            list-style-type: none;
+        }
+        
+        #list-result > li{
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
   <h1>Form Pendaftaran</h1>
-  <form action="" method="POST">
-    <input type="text" name="firstname" id="firstname" placeholder="First name"> <br/><br/>
+  <br/>
+  <form action="" method="POST" id="regist-form">
+    <input type="text"  name="firstname" id="firstname" placeholder="First name"> <br/><br/>
     <input type="text" name="lastname" id="lastname" placeholder="Last Name"> <br/><br/>
+    <input type="email" name="email" id="email" placeholder="Email"> <br/><br/>
     <input type="text" name="nim" id="nim" placeholder="NIM"> <br/><br/>
 
+    <span>Asal Sekolah : </span>
+    <select name="sma" id="sma">
+        <option value="SMAN 1">SMAN 1</option>
+        <option value="SMAN 2">SMAN 2</option>
+        <option value="SMAN 3">SMAN 3</option>
+    </select>
+
+    <br/></br>
+
+    <input type="radio" name="gender" value="male" id="laki-laki" checked>
+    <label for="laki-laki">
+        <span>Laki Laki</span>
+    </label>
+
+    <input type="radio" name="gender" value="female" id="perempuan">
+    <label for="perempuan">
+        <span>Perempuan</span>
+    </label>
+
+    <br/><br/>
+
     <input type="submit" value="Daftar">
+    <input type="reset" value="Reset">
   </form>
+
+  <div class="result-box">
+      <ul id="list-result"></ul>
+  </div>
+
+  <script src="src/index.js"></script>
 </body>
 </html>
